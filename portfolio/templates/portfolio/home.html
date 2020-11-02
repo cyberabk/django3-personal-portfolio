@@ -4,7 +4,16 @@
 
 {% block content %}
 
-<div class="row justify-content-center my-3">
+<style type="text/css">
+body{
+  background-image:url(/media/portfolio/images/blade.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  padding-top: 20px;
+}
+</style>
+<div class="row justify-content-center my-3 ">
   <div class="col-5">
     <img src="{% static 'portfolio/abk.jpg' %}" class="img-fluid">
   </div>
@@ -12,19 +21,19 @@
 
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
-    <h1 id="hometext" class="font-weight-bold">Muhammad Abubakar is a Python Programmer and also Django Web Developer lives in Pakistan 😊</h1>
+    <h1 id="hometext" class="font-weight-bold text-white">Muhammad Abubakar is a Python Programmer and Django Web Developer 😊</h1>
   </div>
 </div>
 
-<h2 class="mt-5">Portfolio</h2>
+<h2 class="mt-5 text-primary">Portfolio</h2>
 <hr>
-<div class="row">
+<div class="row text-white">
   {% for project in projects %}
   <div class="col-lg-4 col-md-6">
 
     {% if project.url %}
     <a href="{{ project.url }}">
-      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2 ">
     </a>
     {% else %}
 
